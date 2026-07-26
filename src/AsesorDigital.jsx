@@ -112,10 +112,8 @@ export default function AsesorDigital() {
 
       if (data.quick_replies && data.quick_replies.length > 0) {
         setQuickReplies(data.quick_replies.map((label) => ({ label })));
-        setInputEnabled(false);
-      } else {
-        setInputEnabled(true);
       }
+      setInputEnabled(true);
     } catch (err) {
       setIsTyping(false);
       setConnectionError(true);
