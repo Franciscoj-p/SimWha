@@ -148,7 +148,7 @@ export default function AsesorDigital() {
             <HouseIcon color="#075E54" />
           </div>
           <div style={{ flex: 1 }}>
-            <div style={styles.headerName}>Asesor digital · Colsubsidio</div>
+            <div style={styles.headerName}>VIVI · Asistente de Vivienda</div>
             <div style={styles.headerStatus}>
               {connectionError ? "sin conexión" : isTyping ? "escribiendo..." : "en línea"}
             </div>

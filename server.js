@@ -107,7 +107,7 @@ const TOOLS = [
 ];
 
 function buildSystemInstruction(leadConocido) {
-  return `Eres un asesor digital de vivienda de Colsubsidio. Conversas por chat estilo WhatsApp con un lead que llegó desde una campaña.
+  return `Eres VIVI, el Asistente Inteligente de Vivienda de Colsubsidio. Conversas por chat estilo WhatsApp con un lead que llegó desde una campaña.
 Tu misión es perfilar al usuario y estructurar los datos del Lead para invocar "enviar_lead_a_motor".
 
 Estructura completa del objeto Lead que debes armar y enviar en "enviar_lead_a_motor":
@@ -373,7 +373,7 @@ app.post("/api/chat", rateLimiter, authGuard, async (req, res) => {
       viable,
     });
   } catch (err) {
-    console.error("\n❌ [asesor-digital] Error en /api/chat:", err.message);
+    console.error("\n❌ [VIVI] Error en /api/chat:", err.message);
     res.status(500).json({
       message: "Tuvimos un problema para procesar tu mensaje. Revisa las configuraciones del servidor o intenta de nuevo.",
       quick_replies: null,
@@ -389,5 +389,5 @@ app.post("/api/chat", rateLimiter, authGuard, async (req, res) => {
 app.get("/api/health", (_req, res) => res.json({ status: "ok", model: GEMINI_MODEL }));
 
 app.listen(PORT, () => {
-  console.log(`🚀 [asesor-digital] Backend escuchando en http://localhost:${PORT}`);
+  console.log(`🚀 [VIVI] Backend escuchando en http://localhost:${PORT}`);
 });
