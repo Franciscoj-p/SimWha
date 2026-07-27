@@ -87,7 +87,7 @@ Si deseas que Express sirva de forma unificada tanto el backend como el frontend
 
 El asistente VIVI opera bajo un guion conversacional estricto configurado en sus directivas de sistema:
 1. **Paso Inicial**: Solicita la cédula y consulta al afiliado en el CRM.
-2. **Estrategia para No Afiliados**: Si el CRM no lo reporta, VIVI marca `afiliado: false` y omite preguntas sobre categoría, antigüedad de meses y tipo de cotizante para hacer el flujo ágil.
+2. **Estrategia para No Afiliados**: Si el Motor no lo reporta, VIVI marca `afiliado: false` y omite preguntas sobre categoría, antigüedad de meses y tipo de cotizante para hacer el flujo ágil.
 3. **Estrategia Financiera Diferenciada**: VIVI pregunta directamente por los montos de **ahorros voluntarios** y **cesantías acumuladas** de forma separada, sin asumir valores ni mezclar ambos conceptos.
 4. **Regla de Sinceridad de Viabilidad**:
    - Si el Motor de Decisión responde que el usuario **no es viable**: VIVI es directo e informa de manera amable que no califica y **no será contactado** telefónicamente en este momento. A cambio, le proporciona consejos de ahorro y mejora de perfil crediticio para el futuro. El backend limpia los proyectos recomendados para que no se muestre ningún match en pantalla.
